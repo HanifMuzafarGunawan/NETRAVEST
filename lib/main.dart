@@ -158,6 +158,7 @@ class AccessibleGestureDetectorState extends State<AccessibleGestureDetector> {
         break; // Ditemukan tombol yang di-hover, keluar dari loop
       }
     }
+
     // Jika jari berpindah ke tombol baru
     if (matchedId != _currentlyHoveredId) {
       setState(() {
@@ -270,7 +271,7 @@ class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
-    final double paddingVal = 12.0;
+    const double paddingVal = 12.0;
     return Scaffold(
       body: SafeArea(
         child: AccessibleGestureDetector(
@@ -301,9 +302,9 @@ class DashboardScreen extends StatelessWidget {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(20.0),
                           ),
-                          child: Column(
+                          child: const Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
+                            children: [
                               Text(
                                 "Lokasi Anda",
                                 style: TextStyle(
@@ -344,8 +345,8 @@ class DashboardScreen extends StatelessWidget {
                               fit: BoxFit.cover,
                             ),
                           ),
-                          child: Stack(
-                            children: const [
+                          child: const Stack(
+                            children: [
                               Center(
                                 child: Icon(
                                   Icons.location_on,
@@ -401,11 +402,11 @@ class DashboardScreen extends StatelessWidget {
                                         width: 4.0,
                                       ),
                                     ),
-                                    child: Center(
+                                    child: const Center(
                                       child: Column(
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
-                                        children: const [
+                                        children: [
                                           Icon(
                                             Icons
                                                 .emergency, // Menggantikan tanda bintang/SOS
@@ -498,10 +499,10 @@ class DashboardScreen extends StatelessWidget {
                                               16.0,
                                             ),
                                           ),
-                                          child: Row(
+                                          child: const Row(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.center,
-                                            children: const [
+                                            children: [
                                               Icon(
                                                 Icons.sync,
                                                 color: Colors.white,
@@ -617,10 +618,10 @@ class DashboardScreen extends StatelessWidget {
                                               18.0,
                                             ),
                                           ),
-                                          child: Column(
+                                          child: const Column(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.center,
-                                            children: const [
+                                            children: [
                                               Icon(
                                                 Icons.layers,
                                                 color: Colors.white,
@@ -667,8 +668,8 @@ class DashboardScreen extends StatelessWidget {
                                         : const Color(0xFF0D0D0D),
                                     borderRadius: BorderRadius.circular(24.0),
                                   ),
-                                  child: Row(
-                                    children: const [
+                                  child: const Row(
+                                    children: [
                                       Icon(
                                         Icons.phone_in_talk,
                                         color: Colors.white,
@@ -710,10 +711,10 @@ class DashboardScreen extends StatelessWidget {
                                           : const Color(0xFFFF5400),
                                       borderRadius: BorderRadius.circular(32.0),
                                     ),
-                                    child: Column(
+                                    child: const Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                      children: const [
+                                      children: [
                                         Icon(
                                           Icons.phone,
                                           size: 54.0,
@@ -796,8 +797,8 @@ class DashboardScreen extends StatelessWidget {
                                     : Colors.white,
                                 borderRadius: BorderRadius.circular(34.0),
                               ),
-                              child: Row(
-                                children: const [
+                              child: const Row(
+                                children: [
                                   Icon(
                                     Icons.person_outline,
                                     color: Colors.black,
